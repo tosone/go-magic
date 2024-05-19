@@ -258,10 +258,10 @@ file_magwarn(struct magic_set *ms, const char *f, ...)
 	(void) vfprintf(stderr, f, va);
 	va_end(va);
 	(void) fputc('\n', stderr);
-	if (ms->magwarn++ >= ms->magwarn_max) {
-		(void) fprintf(stderr, "Too many warnings, exiting.\n");
-		exit(EXIT_FAILURE);
-	}
+	// if (ms->magwarn++ >= ms->magwarn_max) {
+		// (void) fprintf(stderr, "Too many warnings, exiting.\n");
+		// exit(EXIT_FAILURE);
+	// }
 }
 
 file_protected const char *
@@ -311,7 +311,7 @@ out:
 	return buf;
 }
 
-/* 
+/*
  * https://docs.microsoft.com/en-us/windows/win32/api/winbase/\
  *	nf-winbase-dosdatetimetofiletime?redirectedfrom=MSDN
  */

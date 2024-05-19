@@ -8,7 +8,7 @@ import (
 )
 
 func TestDetect(t *testing.T) {
-	inst, err := New(MAGIC_MIME_TYPE, "./magic.mgc")
+	inst, err := New(MAGIC_MIME, "./magic.mgc")
 	assert.NoError(t, err)
 	ret, err := inst.File("./2401.01663.pdf")
 	assert.NoError(t, err)
